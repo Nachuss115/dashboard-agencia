@@ -1,0 +1,52 @@
+<!-- <p>manifiesto-detalle works!</p> -->
+<!-- Agrega el botón para regresar a carga por llegar -->
+<button (click)="goBackToCargaPorLlegar()" class="btn btn-primary">Regresar a Carga por llegar</button>
+
+<!-- Muestra el manifiesto seleccionado en el título -->
+<h2>Detalle del Manifiesto: {{ manifiestoId }}</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Patente</th>
+      <th scope="col">Chofer</th>
+      <th scope="col">En Ruta</th>
+      <th scope="col">Desde</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ manifiestoDetalle.patente }}</td>
+      <td>{{ manifiestoDetalle.chofer }}</td>
+      <td>{{ manifiestoDetalle.enRuta }}</td>
+      <td>{{ manifiestoDetalle.desde }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Carga</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Descripción</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Peso</th>
+      <th scope="col">Volumen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of manifiestoDetalle.carga">
+      <td>{{ item.descripcion }}</td>
+      <td>{{ item.cantidad }}</td>
+      <td>{{ item.peso }}</td>
+      <td>{{ item.volumen }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Mostrar totales -->
+
+<div class="totals">
+  <p>Total cantidad: {{ totalCantidad }}</p>
+  <p>Total peso: {{ totalPeso }}</p>
+  <p>Total volumen: {{ totalVolumen }}</p>
+</div>

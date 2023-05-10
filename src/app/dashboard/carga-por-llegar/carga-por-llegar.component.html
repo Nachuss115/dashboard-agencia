@@ -1,0 +1,63 @@
+<div class="carga-por-llegar">
+  <h2>Carga por llegar</h2>
+  <!-- Aquí va el contenido de la sección "Carga por llegar" -->
+
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Manifiesto</th>
+        <th>Chofer</th>
+        <th>Patente</th>
+        <th>Cantidad ODT</th>
+        <th>Cantidad Bulto</th>
+        <th>Ruta Camión</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let carga of cargas"
+        (click)="onManifiestoClick(carga.manifiesto)"
+      >
+        <td>
+          <a
+            [routerLink]="['/carga-por-llegar/manifiesto', carga.manifiesto]"
+            >{{ carga.manifiesto }}</a
+          >
+        </td>
+        <td>{{ carga.chofer }}</td>
+        <td>{{ carga.patente }}</td>
+        <td>{{ carga.cantidadODT }}</td>
+        <td>{{ carga.cantidadBulto }}</td>
+        <td>{{ carga.rutaCamion }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="content-container">
+    <div class="totals-container">
+      <h3>Total:</h3>
+      <div class="totals-box">
+        <div class="total-box">
+          <strong>Valor de Carga:</strong> {{ totalValorCarga }}
+        </div>
+        <div class="total-box"><strong>Peso (KG):</strong> {{ totalPeso }}</div>
+        <div class="total-box"><strong>Bultos:</strong> {{ totalBultos }}</div>
+        <div class="total-box">
+          <strong>Volumen:</strong> {{ totalVolumen }}
+        </div>
+      </div>
+    </div>
+
+    <div class="pie-chart-container">
+      <div class="pie-chart">
+        <canvas
+          baseChart
+          [datasets]="pieChartData"
+          [labels]="pieChartLabels"
+          [type]="pieChartType"
+          [options]="pieChartOptions"
+        ></canvas>
+      </div>
+    </div>
+  </div>
+</div>

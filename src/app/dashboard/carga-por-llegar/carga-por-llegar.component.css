@@ -1,0 +1,66 @@
+/* Estilos para carga-por-llegar.component.css, carga-en-recepcion.component.css y carga-por-enviar.component.css */
+
+h2 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Aquí puedes agregar más estilos específicos para cada componente */
+  
+
+  
+  .pie-chart {
+    margin-top: 30px;
+  }
+  
+  
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .totals-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 50%;
+  }
+  
+  .totals-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .total-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    flex-basis: 48%;
+  }
+  
+  .pie-chart-container {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
